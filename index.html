@@ -1,365 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — AppShare</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      color: #1a1a2e;
-      background: #f5f5f0;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — AppShare</title>
+<meta name="description" content="Privacy policy for the AppShare Android application by Cool App Helpdesk.">
+<style>
+  :root {
+    --bg: #f8fafc; --surface: #ffffff; --text: #0f172a; --muted: #64748b;
+    --primary: #2563eb; --primary-soft: #dbeafe; --border: #e2e8f0;
+    --positive: #15803d; --positive-bg: #dcfce7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f172a; --surface: #1e293b; --text: #e2e8f0; --muted: #94a3b8;
+      --primary: #93c5fd; --primary-soft: #1e3a8a; --border: #334155;
+      --positive: #4ade80; --positive-bg: #14532d;
     }
-
-    header {
-      background: linear-gradient(135deg, #7fcfc7 0%, #4fb3ab 50%, #0e1b2c 100%);
-      padding: 48px 24px 40px;
-      text-align: center;
-      color: #fff;
-    }
-
-    header h1 {
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-    }
-
-    header p {
-      margin-top: 8px;
-      font-size: 14px;
-      opacity: 0.85;
-    }
-
-    .container {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 40px 24px 80px;
-    }
-
-    .meta {
-      background: #fff;
-      border-radius: 12px;
-      padding: 20px 24px;
-      margin-bottom: 32px;
-      border-left: 4px solid #4fb3ab;
-      font-size: 14px;
-      color: #444;
-    }
-
-    .meta strong { color: #0e1b2c; }
-
-    section {
-      background: #fff;
-      border-radius: 12px;
-      padding: 28px 28px 24px;
-      margin-bottom: 20px;
-      box-shadow: 0 1px 4px rgba(0,0,0,.06);
-    }
-
-    h2 {
-      font-size: 18px;
-      font-weight: 700;
-      color: #0e1b2c;
-      margin-bottom: 16px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #e8e8e4;
-    }
-
-    h3 {
-      font-size: 15px;
-      font-weight: 600;
-      color: #2a4a60;
-      margin: 20px 0 10px;
-    }
-
-    p { margin-bottom: 12px; color: #333; }
-    p:last-child { margin-bottom: 0; }
-
-    ul {
-      padding-left: 20px;
-      margin-bottom: 12px;
-      color: #333;
-    }
-
-    ul li { margin-bottom: 6px; }
-
-    a { color: #4fb3ab; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    code {
-      font-family: "SF Mono", "Fira Code", Consolas, monospace;
-      font-size: 13px;
-      background: #eef7f6;
-      color: #0e6b62;
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 14px;
-      margin-top: 8px;
-    }
-
-    th {
-      background: #eef7f6;
-      color: #0e1b2c;
-      font-weight: 600;
-      text-align: left;
-      padding: 10px 14px;
-      border-bottom: 2px solid #c8e8e5;
-    }
-
-    td {
-      padding: 10px 14px;
-      border-bottom: 1px solid #f0f0ec;
-      color: #333;
-      vertical-align: top;
-    }
-
-    tr:last-child td { border-bottom: none; }
-
-    .badge-never {
-      display: inline-block;
-      background: #e8f7ee;
-      color: #1a7a46;
-      font-size: 12px;
-      font-weight: 600;
-      padding: 2px 8px;
-      border-radius: 20px;
-    }
-
-    .highlight-box {
-      background: #eef7f6;
-      border-left: 4px solid #4fb3ab;
-      border-radius: 0 8px 8px 0;
-      padding: 14px 18px;
-      margin: 12px 0;
-      font-size: 15px;
-      color: #0e4a44;
-      font-weight: 500;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 13px;
-      color: #888;
-      padding: 24px;
-    }
-  </style>
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 24px 96px; }
+  header { border-radius: 16px; padding: 32px 28px; margin-bottom: 24px;
+    background: linear-gradient(135deg, #38bdf8 0%, #2563eb 55%, #1e3a8a 100%); color: #fff; }
+  header h1 { margin: 0 0 6px; font-size: 28px; font-weight: 700; letter-spacing: -0.01em; }
+  header p { margin: 0; opacity: 0.92; font-size: 15px; }
+  .card { background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 22px 26px; margin: 14px 0; }
+  h2 { font-size: 19px; font-weight: 600; margin: 0 0 12px; letter-spacing: -0.005em; }
+  p, ul, ol { margin: 0 0 12px; }
+  ul, ol { padding-left: 22px; } li { margin-bottom: 6px; }
+  .muted { color: var(--muted); font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { font-weight: 600; color: var(--muted); background: var(--primary-soft); }
+  tr:last-child td { border-bottom: none; }
+  code { background: var(--primary-soft); padding: 1px 6px; border-radius: 4px;
+    font-size: 13px; font-family: "SFMono-Regular", Consolas, Menlo, monospace; }
+  a { color: var(--primary); text-decoration: none; } a:hover { text-decoration: underline; }
+  .badge { display: inline-block; background: var(--positive-bg); color: var(--positive);
+    font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 20px; }
+  footer { margin-top: 32px; text-align: center; color: var(--muted); font-size: 13px; }
+  @media (max-width: 480px) {
+    .wrap { padding: 24px 16px 64px; }
+    header { padding: 24px 20px; } header h1 { font-size: 24px; }
+    .card { padding: 18px 20px; } h2 { font-size: 17px; }
+    table { font-size: 13px; } th, td { padding: 8px 10px; }
+  }
+</style>
 </head>
 <body>
+<main class="wrap">
 
 <header>
   <h1>Privacy Policy</h1>
-  <p>AppShare – APK Backup &amp; Share</p>
+  <p>AppShare &middot; last updated <time datetime="2026-05-14">May 14, 2026</time></p>
 </header>
 
-<div class="container">
+<section class="card">
+  <h2>1. Summary</h2>
+  <p>AppShare (&ldquo;the app&rdquo;) is a local APK backup and sharing utility published by <strong>Cool App Helpdesk</strong>.</p>
+  <ul>
+    <li>The app collects <strong>no personal data</strong> and operates no servers.</li>
+    <li>All app data is stored locally on your device and never transmitted to the developer.</li>
+    <li>The app displays banner advertising provided by <strong>Google AdMob</strong>, which processes a limited set of device data on its own (see section 5).</li>
+  </ul>
+</section>
 
-  <div class="meta">
-    <strong>Effective date:</strong> 2026-05-07 &nbsp;·&nbsp;
-    <strong>Developer:</strong> Daoud &nbsp;·&nbsp;
-    <strong>Contact:</strong> <a href="mailto:coolapphelpdesk@gmail.com">coolapphelpdesk@gmail.com</a> &nbsp;·&nbsp;
-    <strong>Package:</strong> <code>coolapp.appshare</code>
-  </div>
+<section class="card">
+  <h2>2. Data we collect</h2>
+  <p><strong>None.</strong> The developer does not collect personal data, telemetry, identifiers, device information, IP addresses, or usage analytics. There are no user accounts and the developer operates no servers that the app communicates with.</p>
+</section>
 
-  <!-- 1. Overview -->
-  <section>
-    <h2>1. Overview</h2>
-    <p>
-      AppShare is a local APK management utility. We are committed to protecting your privacy.
-      This policy explains clearly what data is and is not collected when you use AppShare.
-    </p>
-    <div class="highlight-box">
-      AppShare itself collects no personal data. All files and preferences are stored locally
-      on your device and are never transmitted to any server operated by the developer.
-    </div>
-  </section>
+<section class="card">
+  <h2>3. Data stored on your device</h2>
+  <table>
+    <thead><tr><th>Item</th><th>Where</th><th>Sent off device?</th></tr></thead>
+    <tbody>
+      <tr><td>List of installed apps</td><td>Device memory (runtime only)</td><td><span class="badge">Never</span></td></tr>
+      <tr><td>Extracted APK files</td><td>Internal storage / Downloads folder</td><td><span class="badge">Never</span></td></tr>
+      <tr><td>APK Vault contents</td><td>App-private internal storage</td><td><span class="badge">Never</span></td></tr>
+      <tr><td>Share history</td><td>App-private <code>SharedPreferences</code></td><td><span class="badge">Never</span></td></tr>
+      <tr><td>App settings (theme, language)</td><td>App-private <code>SharedPreferences</code></td><td><span class="badge">Never</span></td></tr>
+    </tbody>
+  </table>
+</section>
 
-  <!-- 2. Data Collected -->
-  <section>
-    <h2>2. Data Collected by AppShare</h2>
-    <p>All of the following are stored locally on your device only and are never transmitted:</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Data</th>
-          <th>Where it is stored</th>
-          <th>Transmitted?</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>List of installed apps</td>
-          <td>Device memory (runtime only)</td>
-          <td><span class="badge-never">Never</span></td>
-        </tr>
-        <tr>
-          <td>Extracted APK files</td>
-          <td>Device internal storage / Downloads folder</td>
-          <td><span class="badge-never">Never</span></td>
-        </tr>
-        <tr>
-          <td>APK Vault contents</td>
-          <td>Device internal storage</td>
-          <td><span class="badge-never">Never</span></td>
-        </tr>
-        <tr>
-          <td>Share history</td>
-          <td>Device SharedPreferences</td>
-          <td><span class="badge-never">Never</span></td>
-        </tr>
-        <tr>
-          <td>App settings (theme, language)</td>
-          <td>Device SharedPreferences</td>
-          <td><span class="badge-never">Never</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+<section class="card">
+  <h2>4. Permissions used</h2>
+  <table>
+    <thead><tr><th>Permission</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr><td><code>QUERY_ALL_PACKAGES</code></td><td>List installed apps so you can browse, extract, and share them &mdash; the core function of the app.</td></tr>
+      <tr><td><code>REQUEST_INSTALL_PACKAGES</code></td><td>Reinstall APK files from your local backup.</td></tr>
+      <tr><td><code>INTERNET</code></td><td>Required by Google AdMob to load banner advertisements.</td></tr>
+      <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Required by Google AdMob to check connectivity before loading ads.</td></tr>
+      <tr><td><code>INSTALL_SHORTCUT</code></td><td>Allow AppShare to be added to the device home screen.</td></tr>
+    </tbody>
+  </table>
+  <p>No permission is used for any purpose other than what is listed above.</p>
+</section>
 
-  <!-- 3. AdMob -->
-  <section>
-    <h2>3. Third-Party Services — Google AdMob</h2>
-    <p>
-      AppShare displays banner advertisements served by <strong>Google AdMob</strong>
-      (Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA).
-      To serve relevant ads, AdMob may automatically collect:
-    </p>
-    <ul>
-      <li>Advertising ID (AAID)</li>
-      <li>IP address (used to derive approximate location)</li>
-      <li>Device information (model, OS version, screen size)</li>
-      <li>App interaction data (ad impressions, clicks)</li>
-      <li>Diagnostic data</li>
-    </ul>
-    <p>
-      This data is processed by Google under their own privacy policy. AppShare does not
-      receive, store, or have access to this data.
-    </p>
-    <ul>
-      <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a></li>
-      <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses data from partner apps</a></li>
-      <li>Opt out: Device Settings → Google → Ads → Opt out of Ads Personalisation</li>
-    </ul>
+<section class="card">
+  <h2>5. Network activity and third parties</h2>
+  <p>The only network traffic the app generates is to <strong>Google AdMob</strong> (Google LLC), to load banner advertisements. The developer does not operate any servers that the app contacts.</p>
+  <p>To serve ads, Google AdMob processes data on its own, as an independent data controller. The data Google may receive includes:</p>
+  <ul>
+    <li>The device&rsquo;s advertising ID (a resettable identifier you control in your device settings).</li>
+    <li>Your IP address (used to derive approximate location).</li>
+    <li>General device information (model, OS version, screen size, language).</li>
+    <li>Ad interaction data (impressions, clicks).</li>
+    <li>Diagnostic data.</li>
+  </ul>
+  <p>The developer does not receive this data; AdMob shares only aggregated revenue reports. Relevant Google references:</p>
+  <ul>
+    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+    <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use their services</a></li>
+    <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob &amp; AdSense data disclosures</a></li>
+  </ul>
+  <p>You can reset or delete your advertising ID, and opt out of personalised ads, at any time in <em>Device Settings &rarr; Privacy &rarr; Ads</em>. In the European Economic Area, the United Kingdom, and Switzerland, the app shows a consent prompt powered by Google&rsquo;s User Messaging Platform on first launch where you may decline personalised advertising; non-personalised ads will still be shown.</p>
+</section>
 
-    <h3>GDPR / EEA &amp; UK Users</h3>
-    <p>
-      If you are located in the European Economic Area (EEA) or United Kingdom, AdMob will
-      request your consent before collecting data for personalised advertising. You may
-      withdraw consent at any time through your device ad settings.
-    </p>
-  </section>
+<section class="card">
+  <h2>6. Children&rsquo;s privacy</h2>
+  <p>The app is not directed at children under 13 and is intended for general audiences. The developer does not knowingly collect data from children. AdMob is configured to serve only non-personalised ads to users who appear, via the consent prompt described above, to be in regions where children&rsquo;s privacy rules apply.</p>
+</section>
 
-  <!-- 4. Permissions -->
-  <section>
-    <h2>4. Permissions Used and Why</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Permission</th>
-          <th>Reason</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>QUERY_ALL_PACKAGES</code></td>
-          <td>Required to list all installed apps so you can browse, extract, and share them. This is the core function of AppShare.</td>
-        </tr>
-        <tr>
-          <td><code>REQUEST_INSTALL_PACKAGES</code></td>
-          <td>Required to reinstall APK files from your local backup.</td>
-        </tr>
-        <tr>
-          <td><code>INTERNET</code></td>
-          <td>Required by Google AdMob to serve banner advertisements.</td>
-        </tr>
-        <tr>
-          <td><code>ACCESS_NETWORK_STATE</code></td>
-          <td>Required by Google AdMob to check connectivity before loading ads.</td>
-        </tr>
-        <tr>
-          <td><code>INSTALL_SHORTCUT</code></td>
-          <td>Allows AppShare to be added to the device home screen.</td>
-        </tr>
-      </tbody>
-    </table>
-    <p style="margin-top:14px;">No permission is used for any purpose other than what is stated above.</p>
-  </section>
+<section class="card">
+  <h2>7. Data retention and deletion</h2>
+  <ul>
+    <li><strong>APK files and vault:</strong> remain on your device until you delete them inside the app or via your file manager.</li>
+    <li><strong>Share history:</strong> remains on your device until you clear it with the &ldquo;Clear history&rdquo; action.</li>
+    <li><strong>Settings:</strong> remain on your device until you uninstall the app.</li>
+    <li><strong>Uninstall:</strong> removes all app settings and share history. APK files saved to your Downloads folder are not removed on uninstall.</li>
+  </ul>
+</section>
 
-  <!-- 5. Data Sharing -->
-  <section>
-    <h2>5. Data Sharing</h2>
-    <p>
-      AppShare does <strong>not</strong> sell, trade, or share any user data with third parties,
-      except as described in Section 3 (Google AdMob), which operates independently and under
-      its own terms.
-    </p>
-  </section>
+<section class="card">
+  <h2>8. Security</h2>
+  <p>All data managed by the app is stored locally on your device and protected by Android&rsquo;s built-in application sandboxing. APK files in the app&rsquo;s internal storage are not accessible to other apps. Files saved to the Downloads folder follow standard Android file access rules. The app is distributed through the Google Play Store, which verifies the developer signing key on every update.</p>
+</section>
 
-  <!-- 6. Data Retention -->
-  <section>
-    <h2>6. Data Retention</h2>
-    <p>Since AppShare stores all data locally on your device:</p>
-    <ul>
-      <li><strong>APK files and vault:</strong> Remain on your device until you delete them from within the app or manually from your file manager.</li>
-      <li><strong>Share history:</strong> Remains on your device until you clear it using the "Clear history" button in the app.</li>
-      <li><strong>Settings:</strong> Remain on your device until you uninstall the app.</li>
-    </ul>
-    <p>
-      Uninstalling AppShare removes all app settings and history.
-      APK files saved to your Downloads folder are <strong>not</strong> removed on uninstall.
-    </p>
-  </section>
+<section class="card">
+  <h2>9. Changes to this policy</h2>
+  <p>If any material aspect of how the app handles data ever changes, this page will be updated and the &ldquo;last updated&rdquo; date above will be bumped. Continued use after a change constitutes acceptance.</p>
+</section>
 
-  <!-- 7. Children -->
-  <section>
-    <h2>7. Children's Privacy</h2>
-    <p>
-      AppShare is not directed at children under the age of 13. We do not knowingly collect
-      any information from children. The app does not contain content inappropriate for children,
-      but it is a utility app intended for general audiences.
-    </p>
-  </section>
+<section class="card">
+  <h2>10. Contact</h2>
+  <p>Questions or feedback? Email <a href="mailto:coolapphelpdesk@gmail.com">coolapphelpdesk@gmail.com</a>.</p>
+</section>
 
-  <!-- 8. Security -->
-  <section>
-    <h2>8. Security</h2>
-    <p>
-      All data managed by AppShare is stored locally on your device and protected by Android's
-      built-in application sandboxing. APK files in the app's internal storage are not accessible
-      to other apps. Files saved to the Downloads folder follow standard Android file access rules.
-    </p>
-  </section>
+<footer>&copy; 2026 Cool App Helpdesk &middot; AppShare</footer>
 
-  <!-- 9. Changes -->
-  <section>
-    <h2>9. Changes to This Policy</h2>
-    <p>
-      We may update this Privacy Policy from time to time. Any changes will be reflected by
-      updating the effective date at the top of this document. Continued use of AppShare after
-      changes are posted constitutes your acceptance of the updated policy.
-    </p>
-  </section>
-
-  <!-- 10. Contact -->
-  <section>
-    <h2>10. Contact</h2>
-    <p>If you have any questions or concerns about this Privacy Policy, please contact:</p>
-    <p><strong>Email:</strong> <a href="mailto:coolapphelpdesk@gmail.com">coolapphelpdesk@gmail.com</a></p>
-  </section>
-
-</div>
-
-<footer>
-  Last updated: 2026-05-07 &nbsp;·&nbsp; AppShare – APK Backup &amp; Share
-</footer>
-
+</main>
 </body>
 </html>
