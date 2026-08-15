@@ -56,22 +56,33 @@
 
 <header>
   <h1>Privacy Policy</h1>
-  <p>AppShare &middot; last updated <time datetime="2026-05-14">May 14, 2026</time></p>
+  <p>AppShare &middot; last updated <time datetime="2026-08-15">August 15, 2026</time></p>
 </header>
 
 <section class="card">
   <h2>1. Summary</h2>
   <p>AppShare (&ldquo;the app&rdquo;) is a local APK backup and sharing utility published by <strong>Cool App Helpdesk</strong>.</p>
   <ul>
-    <li>The app collects <strong>no personal data</strong> and operates no servers.</li>
-    <li>All app data is stored locally on your device and never transmitted to the developer.</li>
-    <li>The app displays banner advertising provided by <strong>Google AdMob</strong>, which processes a limited set of device data on its own (see section 5).</li>
+    <li>The app reads the <strong>list of apps installed on your device</strong> &mdash; its core function &mdash; but only after you have seen an in-app explanation and tapped &ldquo;Allow&rdquo;. That list stays on your device and is <strong>never uploaded, transmitted or shared</strong>.</li>
+    <li>There are no user accounts, no analytics and no telemetry. All app data is stored locally on your device.</li>
+    <li>The only information that ever leaves your device is what you type into the optional <strong>Send Feedback</strong> form, if you choose to submit it (see section 5).</li>
+    <li>The app includes <strong>Google AdMob</strong> for banner advertising, which processes a limited set of device data on its own (see section 5). Advertising is currently switched off and the ad SDK is not started at all.</li>
   </ul>
 </section>
 
 <section class="card">
   <h2>2. Data we collect</h2>
-  <p><strong>None.</strong> The developer does not collect personal data, telemetry, identifiers, device information, IP addresses, or usage analytics. There are no user accounts and the developer operates no servers that the app communicates with.</p>
+
+  <p><strong>Installed applications (with your consent).</strong> AppShare collects the list of apps installed on your device &mdash; their names, package names, icons, version numbers and sizes &mdash; in order to display them, to show your storage breakdown, and to let you extract, back up and share their APK files. This is the app&rsquo;s core function and it cannot work without it.</p>
+  <ul>
+    <li>Before any of it is read, the app shows a <strong>prominent disclosure</strong> explaining what is collected and why, and asks for your explicit permission. Nothing is read until you tap &ldquo;Allow&rdquo;. Dismissing the notice, pressing back, or leaving the app is <em>not</em> treated as agreement.</li>
+    <li>The list is processed <strong>entirely on your device</strong>, held in memory while the app runs. It is never uploaded, transmitted, sold or shared with the developer or with any third party.</li>
+    <li>You can <strong>withdraw your permission at any time</strong> in <em>Settings &rarr; Privacy &rarr; Read installed apps</em>. The list is discarded immediately when you do.</li>
+  </ul>
+
+  <p><strong>Feedback you choose to send.</strong> If you use the in-app <em>Send Feedback</em> form, the message you submit is sent to the developer so that it can be read and answered. It contains the feedback type, subject and message you wrote, a contact address <em>only if you fill one in</em>, and basic technical context (app version, device model, Android version) to help reproduce the issue reported. It is used solely to respond to and act on your feedback, and is never used for advertising or shared with third parties. Submitting the form is entirely optional; the rest of the app works without it.</p>
+
+  <p><strong>Everything else: none.</strong> The developer collects no other personal data, no identifiers, no location, no contacts, no analytics and no usage tracking.</p>
 </section>
 
 <section class="card">
@@ -79,7 +90,8 @@
   <table>
     <thead><tr><th>Item</th><th>Where</th><th>Sent off device?</th></tr></thead>
     <tbody>
-      <tr><td>List of installed apps</td><td>Device memory (runtime only)</td><td><span class="badge">Never</span></td></tr>
+      <tr><td>List of installed apps</td><td>Device memory (runtime only, after you allow it)</td><td><span class="badge">Never</span></td></tr>
+      <tr><td>Your answer to the installed-apps notice</td><td>App-private <code>SharedPreferences</code></td><td><span class="badge">Never</span></td></tr>
       <tr><td>Extracted APK files</td><td>Internal storage / Downloads folder</td><td><span class="badge">Never</span></td></tr>
       <tr><td>APK Vault contents</td><td>App-private internal storage</td><td><span class="badge">Never</span></td></tr>
       <tr><td>Share history</td><td>App-private <code>SharedPreferences</code></td><td><span class="badge">Never</span></td></tr>
@@ -93,10 +105,12 @@
   <table>
     <thead><tr><th>Permission</th><th>Reason</th></tr></thead>
     <tbody>
-      <tr><td><code>QUERY_ALL_PACKAGES</code></td><td>List installed apps so you can browse, extract, and share them &mdash; the core function of the app.</td></tr>
+      <tr><td><code>QUERY_ALL_PACKAGES</code></td><td>List installed apps so you can browse, extract, and share them &mdash; the core function of the app. Used only after you allow it in the in-app notice, and never used to build a profile or to transmit the list anywhere.</td></tr>
       <tr><td><code>REQUEST_INSTALL_PACKAGES</code></td><td>Reinstall APK files from your local backup.</td></tr>
-      <tr><td><code>INTERNET</code></td><td>Required by Google AdMob to load banner advertisements.</td></tr>
-      <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Required by Google AdMob to check connectivity before loading ads.</td></tr>
+      <tr><td><code>PACKAGE_USAGE_STATS</code></td><td>Optional. Granted by you in system settings; lets the Storage screen and app details show each app&rsquo;s app, data and cache sizes. The app works without it.</td></tr>
+      <tr><td><code>INTERNET</code></td><td>Sending the optional feedback form, and loading banner advertisements when advertising is enabled.</td></tr>
+      <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Check connectivity before a network request is attempted.</td></tr>
+      <tr><td><code>AD_ID</code></td><td>Declared for Google AdMob&rsquo;s advertising identifier. Not used while advertising is switched off.</td></tr>
       <tr><td><code>INSTALL_SHORTCUT</code></td><td>Allow AppShare to be added to the device home screen.</td></tr>
     </tbody>
   </table>
@@ -105,8 +119,9 @@
 
 <section class="card">
   <h2>5. Network activity and third parties</h2>
-  <p>The only network traffic the app generates is to <strong>Google AdMob</strong> (Google LLC), to load banner advertisements. The developer does not operate any servers that the app contacts.</p>
-  <p>To serve ads, Google AdMob processes data on its own, as an independent data controller. The data Google may receive includes:</p>
+  <p>The app generates network traffic in only two situations, and <strong>never to transmit your list of installed apps</strong>, which does not leave your device under any circumstances.</p>
+  <p><strong>1. Feedback you submit.</strong> When you tap Send on the in-app feedback form, its contents are sent over HTTPS to a feedback endpoint operated by the developer on Google Cloud Run (europe-west1). Nothing is sent unless you submit the form. See section 2 for exactly what it contains.</p>
+  <p><strong>2. Advertising, when enabled.</strong> The app includes the Google AdMob SDK for banner advertising. <strong>Advertising is currently switched off, and while it is off the ad SDK is not initialised at all &mdash; the app makes no ad-related network requests whatsoever.</strong> When advertising is enabled again, AdMob (Google LLC) processes data on its own, as an independent data controller. The data Google may then receive includes:</p>
   <ul>
     <li>The device&rsquo;s advertising ID (a resettable identifier you control in your device settings).</li>
     <li>Your IP address (used to derive approximate location).</li>
@@ -120,12 +135,12 @@
     <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use their services</a></li>
     <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob &amp; AdSense data disclosures</a></li>
   </ul>
-  <p>You can reset or delete your advertising ID, and opt out of personalised ads, at any time in <em>Device Settings &rarr; Privacy &rarr; Ads</em>. In the European Economic Area, the United Kingdom, and Switzerland, the app shows a consent prompt powered by Google&rsquo;s User Messaging Platform on first launch where you may decline personalised advertising; non-personalised ads will still be shown.</p>
+  <p>You can reset or delete your advertising ID, and opt out of personalised ads, at any time in <em>Device Settings &rarr; Privacy &rarr; Ads</em>. Should advertising be enabled again in a future version, a consent prompt meeting the requirements for the European Economic Area, the United Kingdom and Switzerland will be presented before any personalised ad data is collected, and this page will be updated beforehand.</p>
 </section>
 
 <section class="card">
   <h2>6. Children&rsquo;s privacy</h2>
-  <p>The app is not directed at children under 13 and is intended for general audiences. The developer does not knowingly collect data from children. AdMob is configured to serve only non-personalised ads to users who appear, via the consent prompt described above, to be in regions where children&rsquo;s privacy rules apply.</p>
+  <p>The app is not directed at children under 13 and is intended for general audiences. The developer does not knowingly collect data from children. AdMob is configured to request only general-audience (G-rated) ad content; advertising is in any case currently switched off.</p>
 </section>
 
 <section class="card">
@@ -134,7 +149,9 @@
     <li><strong>APK files and vault:</strong> remain on your device until you delete them inside the app or via your file manager.</li>
     <li><strong>Share history:</strong> remains on your device until you clear it with the &ldquo;Clear history&rdquo; action.</li>
     <li><strong>Settings:</strong> remain on your device until you uninstall the app.</li>
-    <li><strong>Uninstall:</strong> removes all app settings and share history. APK files saved to your Downloads folder are not removed on uninstall.</li>
+    <li><strong>List of installed apps:</strong> held in memory only while the app is running. It is discarded when the app closes, and immediately if you withdraw permission in <em>Settings &rarr; Privacy</em>. There is nothing to delete off-device, because it is never sent off-device.</li>
+    <li><strong>Feedback you submitted:</strong> retained by the developer only for as long as it takes to read and act on it. To have a message you sent deleted, email the address in section 10 and it will be removed.</li>
+    <li><strong>Uninstall:</strong> removes all app settings, your saved permission choice, and share history. APK files saved to your Downloads folder are not removed on uninstall.</li>
   </ul>
 </section>
 
